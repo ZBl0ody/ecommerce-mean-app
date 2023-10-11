@@ -1,0 +1,45 @@
+<div class="container my-3">
+  <div
+    class="card movie_card shadow-lg my-5 bg23 py-3"
+    *ngFor="let order of userOrders"
+  >
+    <div class="row container">
+      <p class="text-white">#order:{{ order._id }}</p>
+      <div *ngFor="let item of order.items">
+        <div class="card m-3 text-white sp">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row align-items-center">
+                <div>
+                  <img
+                    [src]="item.image"
+                    class="img-fluid rounded-3"
+                    alt="Shopping item"
+                    style="width: 65px"
+                  />
+                </div>
+                <div class="ms-3">
+                  <h5>{{ item.title }}</h5>
+                  <div class="d-flex gap-2">
+                    <p class="small mb-0">⭐ {{ item.rating.rate }}</p>
+                    <p class="small mb-0">( {{ item.rating.count }})</p>
+                  </div>
+                  <p class="small mb-0">
+                    {{ item.category }}
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex flex-row align-items-center">
+                <h5 class="fw-normal mb-0">${{ item.price }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center mt-5" *ngIf="userOrders.length == 0">
+  <h3>No orders placed Yet!</h3>
+</div>

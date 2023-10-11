@@ -1,0 +1,18 @@
+.bg23 {
+  max-width: 255px;
+}
+.large-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.rate {
+  font-size: 13px;
+  height: fit-content;
+  color: aliceblue;
+  background-color: crimson;
+  padding: 3px;
+  min-width: 50px;
+  max-width: fit-content;
+}

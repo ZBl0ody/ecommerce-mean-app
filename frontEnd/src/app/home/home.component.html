@@ -1,0 +1,37 @@
+<main
+  role="main"
+  class="inner cover text-center d-flex justify-content-center flex-column"
+>
+  <div class="hero">
+    <h1 class="cover-heading">
+      Discover a World of <br /><span class="bb"> Possibilities</span>
+    </h1>
+  </div>
+  <div class="gradient-custom-2 logo flex-fill h100">
+    <p class="my-5">
+      <a routerLink="/shop" class="btn btn-lg btn-light p-4"
+        >view The Collection ></a
+      >
+    </p>
+    <div
+      class="d-flex gap-5 justify-content-center flex-wrap my-5 bg-opacity-50 bg-black p-5"
+    >
+      <div
+        class="card justify-content-between shadow-sm border-0"
+        style="width: 16rem"
+        *ngFor="let product of products"
+      >
+        <img
+          class="card-img-bottom p-3"
+          [src]="product.image"
+          alt="Card image cap"
+          style="height: 250px"
+        />
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title large-text">{{ product.title }}</h5>
+          <h5 class="card-title">${{ product.price }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

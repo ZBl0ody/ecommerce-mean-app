@@ -1,0 +1,23 @@
+<section class="d-flex justify-content-around text-white">
+  <img
+    class="rounded my-5"
+    [src]="selectedProduct.image"
+    [alt]="selectedProduct.title"
+    width="400"
+  />
+  <div class="w-50 my-5">
+    <h1>{{ selectedProduct.title }}</h1>
+    <h3>${{ selectedProduct.price }}</h3>
+
+    <h5>{{ selectedProduct.description }}</h5>
+    <h5>
+      {{ selectedProduct.category }}
+    </h5>
+    <p>reviewed by: {{ selectedProduct.rating.count }}</p>
+    <app-rating [rating]="selectedProduct.rating.rate"></app-rating>
+
+    <button (click)="addToCard(selectedProduct)" class="btn btn-danger w-50">
+      add To Card
+    </button>
+  </div>
+</section>

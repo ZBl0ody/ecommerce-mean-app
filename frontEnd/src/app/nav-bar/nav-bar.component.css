@@ -1,0 +1,14 @@
+.navbar-brand {
+  font-size: 30px;
+  background-color: crimson;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.bg {
+  background-color: #232323;
+}
+.nav-link.active {
+  background-color: crimson; /* Set your desired background color */
+  border-radius: 30px;
+}

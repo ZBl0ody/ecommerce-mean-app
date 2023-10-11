@@ -1,0 +1,46 @@
+<div
+  class="d-flex flex-column align-items-center gap-2 justify-content-center flex-wrap my-5"
+>
+  <div class="d-flex gap-3 justify-content-center flex-wrap mx-5">
+    <div
+      class="card justify-content-between bg23 shadow-sm border-0"
+      style="width: 18rem"
+      *ngFor="let product of products"
+    >
+      <div [routerLink]="['/shop', product.id]">
+        <img
+          class="card-img-bottom p-3"
+          [src]="product.image"
+          alt="Card image cap"
+          style="height: 250px"
+        />
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title large-text">{{ product.title }}</h5>
+          <h5 class="card-title">${{ product.price }}</h5>
+        </div>
+      </div>
+      <div class="d-flex gap-2 align-items-center m-2 justify-content-between">
+        <div class="d-flex gap-2">
+          <div class="rounded-5 rate">⭐ {{ product.rating.rate }}</div>
+          <p class="m-0">({{ product.rating.count }})</p>
+        </div>
+        <button
+          (click)="addToCard(product)"
+          class="btn btn-outline-danger rounded-5"
+          [ngClass]="{ disabled: product.rating.count == 0 }"
+        >
+          +
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center my-5">
+    <mat-paginator
+      [length]="total_items"
+      [pageSize]="pages_size"
+      aria-label="Select page"
+      (page)="changePage($event)"
+    >
+    </mat-paginator>
+  </div>
+</div>

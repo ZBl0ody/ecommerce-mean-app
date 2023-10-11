@@ -1,0 +1,59 @@
+.cover-heading {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  color: #232323;
+}
+.hero {
+  min-height: 50vh;
+
+  margin-bottom: -50;
+}
+a {
+  font-size: 30px;
+  border-radius: 500px;
+}
+.h100 {
+  min-height: 72.9vh;
+}
+
+.bb {
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 20px;
+}
+span {
+  font-family: "Dancing Script", cursive;
+}
+.rate {
+  font-size: 13px;
+  height: fit-content;
+  color: aliceblue;
+  background-color: crimson;
+  padding: 3px;
+  min-width: 50px;
+  max-width: fit-content;
+}
+main {
+  margin-top: 150px;
+}
+.bg-opacity-50 {
+  backdrop-filter: opacity(20%);
+  backdrop-filter: blur(1000px);
+}
+@media (min-width: 500px) {
+  .cover-heading {
+    font-size: 80px;
+  }
+}
+@media (min-width: 776px) {
+  .cover-heading {
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cover-heading {
+    font-size: 150px;
+  }
+}
